@@ -1,5 +1,1 @@
-# indiamoney.dpdns.org
-
-
-
-Read Licence
+# Read Licence.md
