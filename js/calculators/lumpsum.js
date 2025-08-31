@@ -20,6 +20,7 @@ document.getElementById('lumpsum-form').addEventListener('submit', function(e) {
     const afterTaxElm = document.getElementById('lumpsum-future-value-after-tax');
     if (afterTaxElm) afterTaxElm.textContent = formatCurrency(futureValueAfterTax);
     document.getElementById('lumpsum-real-future-value').textContent = formatCurrency(realFutureValue);
+    document.getElementById('lumpsum-cagr').textContent = `${rate.toFixed(1)}%`;
 
     const labels = [];
     const data = [];

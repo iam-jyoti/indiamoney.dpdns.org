@@ -63,6 +63,8 @@ document.getElementById('swp-form').addEventListener('submit', function(e) {
     document.getElementById('swp-longevity').textContent = longevity.toFixed(1);
     document.getElementById('swp-total-withdrawals').textContent = formatCurrency(totalWithdrawals);
     document.getElementById('swp-remaining-value').textContent = formatCurrency(balance > 0 ? balance : 0);
+    const annualWithdrawalPercent = (parseIndianNumber(document.getElementById('swp-monthly-withdrawal').value) * periodsPerYear / initialInvestment) * 100;
+    document.getElementById('swp-withdrawal-percent').textContent = `${annualWithdrawalPercent.toFixed(1)}%`;
 
     createGrowthChart(labels, data, 'swp-chart');
 

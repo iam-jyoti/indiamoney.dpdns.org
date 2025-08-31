@@ -54,6 +54,7 @@ document.getElementById('sip-form').addEventListener('submit', function(e) {
     const afterTaxElm = document.getElementById('sip-future-value-after-tax');
     if (afterTaxElm) afterTaxElm.textContent = formatCurrency(futureValueAfterTax);
     document.getElementById('sip-real-future-value').textContent = formatCurrency(realFutureValue);
+    document.getElementById('sip-annual-return').textContent = formatCurrency(wealthGained / duration);
 
     createGrowthChart(labels, data, 'sip-chart');
 });

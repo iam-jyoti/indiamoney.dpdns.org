@@ -35,6 +35,8 @@ document.getElementById('sip-target-form').addEventListener('submit', function(e
     document.getElementById('sip-target-required-sip').textContent = formatCurrency(requiredSip);
     document.getElementById('sip-target-total-investment').textContent = formatCurrency(totalInvestment + existingInvestments);
     document.getElementById('sip-target-future-existing').textContent = formatCurrency(existingInvestments * Math.pow((1 + rate / 100), duration));
+    const savingsPercent = (requiredSip / 50000) * 100; // Assuming average monthly income of 50k
+    document.getElementById('sip-target-savings-percent').textContent = `${savingsPercent.toFixed(1)}%`;
 
     const labels = [];
     const data = [];
