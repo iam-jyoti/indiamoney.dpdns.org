@@ -32,6 +32,10 @@ document.getElementById('fire-form').addEventListener('submit', function(e) {
     document.getElementById('fire-years-to-fire').textContent = yearsToFire > 0 ? yearsToFire.toFixed(1) : 'Already FIREd!';
     document.getElementById('fire-number').textContent = formatCurrency(fireNumber);
     document.getElementById('fire-savings-rate').textContent = `${savingsRate.toFixed(1)}%`;
+    
+    // Calculate and display age at FIRE
+    const ageAtFire = yearsToFire > 0 ? currentAge + yearsToFire : currentAge;
+    document.getElementById('fire-age-at-fire').textContent = ageAtFire.toFixed(0);
 
     createGrowthChart(labels, data, 'fire-chart');
 

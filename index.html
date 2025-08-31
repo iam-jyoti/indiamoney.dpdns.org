@@ -83,7 +83,7 @@
                 <div class="row g-2">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="sip-cadence" class="form-label">Contribution Cadence</label>
+                            <label for="sip-cadence" class="form-label">Contribution Frequency</label>
                             <select class="form-select" id="sip-cadence">
                                 <option value="monthly" selected>Monthly</option>
                                 <option value="weekly">Weekly</option>
@@ -189,7 +189,12 @@
             </div>
             <canvas id="sip-chart"></canvas>
             <div class="educational-content">
-                <p>"SIP allows disciplined investing by spreading investments over time, reducing market volatility impact through rupee cost averaging. Regular investments can build substantial wealth through compounding. Step-up SIP helps increase investments with rising income, accelerating wealth creation."</p>
+                <p><strong>SIP (Systematic Investment Plan)</strong> enables disciplined investing through regular contributions, reducing market timing risk via rupee cost averaging.</p>
+                <ul class="small mb-2">
+                    <li><strong>Compounding:</strong> Earlier investments grow exponentially over time</li>
+                    <li><strong>Inflation Impact:</strong> Erodes purchasing power; invest to beat inflation</li>
+                    <li><strong>Step-up:</strong> Increase contributions annually to accelerate wealth creation</li>
+                </ul>
                 <p class="small text-muted mb-0">Tax model: Equity LTCG at 10% on gains over ₹1,00,000; STCG approximated at 15% for < 1 year. Debt gains taxed at user slab. This is a simplified approximation for planning.</p>
             </div>
             
@@ -302,7 +307,12 @@
             </div>
             <canvas id="lumpsum-chart"></canvas>
             <div class="educational-content">
-                <p>"Lumpsum investment suits investors with surplus funds available immediately. It benefits from full compounding from day one, potentially generating higher returns than SIP if invested at market lows. However, it carries higher timing risk compared to SIP."</p>
+                <p><strong>Lumpsum Investment</strong> involves investing a large amount at once, suitable for investors with surplus funds.</p>
+                <ul class="small mb-2">
+                    <li><strong>Full Compounding:</strong> Entire amount compounds from day one</li>
+                    <li><strong>Market Timing Risk:</strong> Higher risk if invested at market peaks</li>
+                    <li><strong>Inflation Protection:</strong> Helps preserve and grow purchasing power over time</li>
+                </ul>
                 <p class="small text-muted mb-0">Tax model: Equity LTCG at 10% on gains over ₹1,00,000; STCG approximated at 15% for < 1 year. Debt gains taxed at user slab. This is a simplified approximation for planning.</p>
             </div>
             
@@ -353,7 +363,7 @@
                 <div class="row g-2">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="sip-target-cadence" class="form-label">Contribution Cadence</label>
+                            <label for="sip-target-cadence" class="form-label">Contribution Frequency</label>
                             <select class="form-select" id="sip-target-cadence">
                                 <option value="monthly" selected>Monthly</option>
                                 <option value="weekly">Weekly</option>
@@ -401,7 +411,12 @@
             <canvas id="sip-target-chart"></canvas>
             <div id="cost-of-delay-section" class="mt-4"></div>
             <div class="educational-content">
-                <p>"Goal-based investing helps prioritize financial objectives like child's education, home purchase, or retirement. By determining required SIP amounts, you can systematically work towards specific financial goals within defined timeframes."</p>
+                <p><strong>SIP Target Calculator</strong> helps determine required monthly investments to achieve specific financial goals.</p>
+                <ul class="small mb-2">
+                    <li><strong>Goal-based Planning:</strong> Systematic approach to achieve targets like education, home, retirement</li>
+                    <li><strong>Cost of Delay:</strong> Delaying investments significantly increases required monthly amounts</li>
+                    <li><strong>Time Value:</strong> Starting early reduces monthly burden due to compounding benefits</li>
+                </ul>
                 <p class="small text-muted mb-0">Tax model: Equity LTCG at 10% on gains over ₹1,00,000; STCG approximated at 15% for < 1 year. Debt gains taxed at user slab. This is a simplified approximation for planning.</p>
             </div>
         </div>
@@ -499,7 +514,12 @@
             <canvas id="swp-chart"></canvas>
             <div id="swp-annual-breakdown" class="mt-4"></div>
             <div class="educational-content">
-                <p>"SWP provides regular income from mutual fund investments, typically used for retirement planning. It offers tax efficiency compared to traditional income sources and flexibility to adjust withdrawal amounts based on needs."</p>
+                <p><strong>SWP (Systematic Withdrawal Plan)</strong> provides regular income by redeeming mutual fund units systematically.</p>
+                <ul class="small mb-2">
+                    <li><strong>Tax Efficiency:</strong> Only capital gains taxed, not entire withdrawal amount</li>
+                    <li><strong>Flexibility:</strong> Adjust withdrawal amounts based on changing needs</li>
+                    <li><strong>Inflation Risk:</strong> Fixed withdrawals lose purchasing power over time</li>
+                </ul>
                 <p class="small text-muted mb-0">Tax model: Equity STCG approx. 15% in year 1; LTCG 10% thereafter with ₹1,00,000 annual exemption; debt gains taxed at user slab. Simplified for planning.</p>
             </div>
         </div>
@@ -553,6 +573,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Calculate</button>
+                <button type="button" class="btn btn-outline-secondary w-100 mt-2 btn-export-png" data-target="fire-calculator">Export PNG</button>
             </form>
             <div id="fire-scenarios" class="mt-4"></div>
         </div>
@@ -572,8 +593,16 @@
                 </div>
             </div>
             <canvas id="fire-chart"></canvas>
+            <div id="fire-age-display" class="text-center mt-3 mb-3">
+                <p class="fw-bold text-primary">Age at FIRE is <span id="fire-age-at-fire">0</span> years</p>
+            </div>
             <div class="educational-content">
-                <p>"FIRE movement focuses on achieving financial independence through aggressive saving and investing, enabling early retirement. The 4% withdrawal rule suggests you need 25 times your annual expenses invested to retire safely."</p>
+                <p><strong>FIRE (Financial Independence, Retire Early)</strong> is a movement focused on achieving financial freedom through aggressive saving and investing.</p>
+                <ul class="small mb-2">
+                    <li><strong>4% Rule:</strong> Withdraw 4% annually from portfolio; need 25x annual expenses</li>
+                    <li><strong>High Savings Rate:</strong> Typically requires saving 50%+ of income</li>
+                    <li><strong>Investment Growth:</strong> Relies on market returns to outpace inflation and expenses</li>
+                </ul>
             </div>
             
             <!-- In-content Ad -->

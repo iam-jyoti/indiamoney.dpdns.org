@@ -347,6 +347,10 @@ body.dark-mode .educational-content .text-muted {
     color: #94a3b8 !important;
 }
 
+body.dark-mode footer .text-muted {
+    color: #e2e8f0 !important;
+}
+
 /* AdSense Placeholder Styles */
 .adsense-placeholder {
     background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
