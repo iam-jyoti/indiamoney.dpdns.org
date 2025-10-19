@@ -414,8 +414,8 @@ body.dark-mode .adsense-placeholder:hover {
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    position: sticky;
-    top: 120px;
+    /* default: non-sticky on small screens */
+    position: static;
 }
 
 .adsense-large {
@@ -481,5 +481,18 @@ body.dark-mode .adsense-placeholder .fas {
     .nav-tabs .nav-link {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
+    }
+}
+
+/* Make sidebar sticky on large screens only */
+@media (min-width: 992px) {
+    .adsense-sticky {
+        position: sticky;
+        top: 120px; /* leaves space for header */
+        align-self: flex-start; /* stick within its column */
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-top: 0.5rem;
     }
 }
